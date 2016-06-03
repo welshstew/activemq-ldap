@@ -97,11 +97,14 @@ public class DeploymentConfigKubernetesModelProcessor {
         ldapDataVol.setName(ConfigParameters.AMQ_BROKER_LDAP_DATA);
         ldapDataVol.setPersistentVolumeClaim(new PersistentVolumeClaimVolumeSource(ConfigParameters.AMQ_BROKER_LDAP_DATA_PVC, false));
 
-        Volume ldapSecret = new Volume();
-        ldapSecret.setSecret(new SecretVolumeSource(ConfigParameters.SECRET_NAME));
-        ldapSecret.setName(ConfigParameters.SECRET_NAME);
+//        Volume ldapSecret = new Volume();
+//        ldapSecret.setSecret(new SecretVolumeSource(ConfigParameters.SECRET_NAME));
+//        ldapSecret.setName(ConfigParameters.SECRET_NAME);
 
-        return new ImmutableList.Builder<Volume>().add(ldapDataVol).add(ldapSecret).build();
+//        return new ImmutableList.Builder<Volume>().add(ldapDataVol).add(ldapSecret).build();
+
+        return new ImmutableList.Builder<Volume>().add(ldapDataVol).build();
+
     }
 
 

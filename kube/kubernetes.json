@@ -160,7 +160,7 @@
     "kind" : "DeploymentConfig",
     "metadata" : {
       "annotations" : {
-        "fabric8.io/git-commit" : "0b0fb104fd5eb310d4290f128c6ea0ec7423c9cd",
+        "fabric8.io/git-commit" : "47698379076b69d6fa948be2adbd1b2458b32cd4",
         "fabric8.io/git-branch" : "master"
       },
       "labels" : {
@@ -239,11 +239,6 @@
             "persistentVolumeClaim" : {
               "claimName" : "amq-broker-ldap-data-pvc",
               "readOnly" : false
-            }
-          }, {
-            "name" : "amq-ldap-secret",
-            "secret" : {
-              "secretName" : "amq-ldap-secret"
             }
           } ]
         }
