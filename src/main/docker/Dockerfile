@@ -20,7 +20,6 @@ LABEL io.k8s.description="OpenLDAP is an open source implementation of the Light
 # Add defaults for config
 COPY ./contrib/config /opt/openshift/config
 COPY ./contrib/lib /opt/openshift/lib
-COPY ./custom /tmp/
 
 # Add startup scripts
 COPY run-*.sh /usr/local/bin/

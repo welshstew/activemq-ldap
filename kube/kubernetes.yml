@@ -121,7 +121,9 @@ objects:
 - apiVersion: "v1"
   kind: "DeploymentConfig"
   metadata:
-    annotations: {}
+    annotations:
+      fabric8.io/git-commit: "0b0fb104fd5eb310d4290f128c6ea0ec7423c9cd"
+      fabric8.io/git-branch: "master"
     labels:
       app: "activemq-ldap"
       project: "activemq-ldap"
@@ -132,7 +134,9 @@ objects:
     replicas: 1
     selector:
       app: "activemq-ldap"
-      deploymentconfig: "activemq-ldap"
+      project: "activemq-ldap"
+      version: "1.0.0-SNAPSHOT"
+      group: "amq"
     strategy:
       annotations: {}
       labels: {}

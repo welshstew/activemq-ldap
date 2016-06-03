@@ -113,12 +113,22 @@ public class DeploymentConfigKubernetesModelProcessor {
 
     }
 
-    private Map<String, String> getSelectors() {
-        Map<String, String> selectors = new HashMap<>();
-        selectors.put("app", ConfigParameters.APP_NAME);
-        selectors.put("deploymentconfig", ConfigParameters.APP_NAME);
+//    private Map<String, String> getSelectors() {
+//        Map<String, String> selectors = new HashMap<>();
+//        selectors.put("app", ConfigParameters.APP_NAME);
+//        selectors.put("deploymentconfig", ConfigParameters.APP_NAME);
+//
+//        return selectors;
+//    }
 
-        return selectors;
+    private Map<String, String> getSelectors() {
+        Map<String, String> labels = new HashMap<>();
+        labels.put("app", ConfigParameters.APP_NAME);
+        labels.put("project", ConfigParameters.APP_NAME);
+        labels.put("version", "1.0.0-SNAPSHOT");
+        labels.put("group", ConfigParameters.GROUP_NAME);
+
+        return labels;
     }
 
     private Probe getProbe() {
