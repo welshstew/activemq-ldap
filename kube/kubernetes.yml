@@ -201,6 +201,6 @@ parameters:
 - name: "IS_TAG"
   value: "latest"
 - name: "IS_DOCKER_REGISTRY"
-  value: "172.30.241.158:5000"
+  value: "172.30.1.1:5000"
 - name: "IS_PULL_NAMESPACE"
   value: "amq"
